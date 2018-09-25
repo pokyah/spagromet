@@ -48,7 +48,6 @@ spatialize <- function(isodatetime, sensor){
  # return the json object
  return(spatialized)
 
-
  # https://gis.stackexchange.com/questions/171827/generate-html-file-with-r-using-leaflet
 
 }
