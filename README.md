@@ -13,3 +13,13 @@ To call this script from a bash terminal :
 
 Then to echo the result in your terminal: 
 `echo"$a"`
+
+
+# from docker 
+sudo docker ps
+sudo docker exec -i -t 210d3850788a /bin/bash
+
+R
+
+devtools::install_github("pokyah/spagromet", ref="master")
+

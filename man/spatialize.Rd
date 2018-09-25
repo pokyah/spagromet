@@ -4,12 +4,14 @@
 \alias{spatialize}
 \title{Query the API and spatialize the data}
 \usage{
-spatialize(isodatetime, sensor)
+spatialize(isodatetime, sensor, token_env_var)
 }
 \arguments{
 \item{isodatetime}{A character specifying the isodatetime ("YYYY-MM-DDTHH:MM:SS") set of records you want to spatialize}
 
 \item{sensor}{A character specifying the sensor you want to spatiliaze (tsa, hra)}
+
+\item{token_env_var}{A character specifying the name of the environment var used to store the agromet API token in the ~/.Renviron file}
 }
 \value{
 A dataframe containing the spatialized data.
