@@ -1,0 +1,18 @@
+Package: spagromet
+Type: Package
+Title: Spatialize AGROMET data
+Version: 0.1.0
+Author: Thomas Goossens (pokyah)
+Maintainer: Thomas Goossens <hello.pokyah@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GNU GPL-V3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    agrometAPI,
+    gstat,
+    sp,
+Remotes : github::pokyah/agrometAPI@v1.4,
+    github::pokyah/mlr@gstat_subfunctions
+RoxygenNote: 6.0.1
