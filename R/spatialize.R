@@ -5,8 +5,8 @@
 #' @importFrom dplyr filter
 #' @importFrom raster crs
 #' @importFrom gstat idw
-#' @importFrom agrometAPI get_from_agromet_API
-#' @importFrom agrometAPI prepare_agromet_API_data.fun
+#' @importFrom agrometAPI get_data
+#' @importFrom agrometAPI type_data
 #' @importFrom sp coordinates
 #' @importFrom sp CRS
 #' @importFrom sp spTransform
@@ -18,8 +18,8 @@
 spatialize <- function(isodatetime, sensor, user_token){
 
  # calling the API to get the data
- data2spatialize = agrometAPI::get_from_agromet_API(dfrom = as.Date(isodatetime), dto = as.Date(isodatetime), user_token = user_token)
- data2spatialize = agrometAPI::prepare_agromet_API_data.fun(data2spatialize)
+ data2spatialize = agrometAPI::get_data(dfrom = as.Date(isodatetime), dto = as.Date(isodatetime), user_token = user_token)
+ data2spatialize = agrometAPI::type_data(data2spatialize)
 
  # making sure we only keep the relevant stations
  data2spatialize = data2spatialize %>%
