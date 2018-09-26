@@ -13,7 +13,7 @@
 #' @param isodatetime A character specifying the isodatetime ("YYYY-MM-DDTHH:MM:SS") set of records you want to spatialize
 #' @param sensor A character specifying the sensor you want to spatiliaze (tsa, hra)
 #' @param token_env_var A character specifying your agromet API token.
-#' @return A dataframe containing the spatialized data.
+#' @return A json containing the spatialized data.
 #' @export
 spatialize <- function(isodatetime, sensor, user_token){
 

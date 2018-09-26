@@ -14,7 +14,7 @@ spatialize(isodatetime, sensor, user_token)
 \item{token_env_var}{A character specifying your agromet API token.}
 }
 \value{
-A dataframe containing the spatialized data.
+A json containing the spatialized data.
 }
 \description{
 Query the API and spatialize the data
