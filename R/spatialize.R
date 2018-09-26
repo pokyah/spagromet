@@ -8,13 +8,13 @@
 #' @importFrom mapview mapshot
 #' @param isodatetime A character specifying the isodatetime ("YYYY-MM-DDTHH:MM:SS") set of records you want to spatialize
 #' @param sensor A character specifying the sensor you want to spatiliaze (tsa, hra)
-#' @param token_env_var A character specifying the name of the environment var used to store the agromet API token in the ~/.Renviron file
+#' @param token_env_var A character specifying your agromet API token.
 #' @return A dataframe containing the spatialized data.
 #' @export
-spatialize <- function(isodatetime, sensor, token_env_var){
+spatialize <- function(isodatetime, sensor, user_token){
 
  # calling the API to get the data
- data2spatialize = agrometAPI::get_from_agromet_API(dfrom = as.Date(isodatetime), dto = as.Date(isodatetime), user_token = Sys.getenv(token_env_var))
+ data2spatialize = agrometAPI::get_from_agromet_API(dfrom = as.Date(isodatetime), dto = as.Date(isodatetime), user_token = user_token)
  data2spatialize = agrometAPI::prepare_agromet_API_data.fun(data2spatialize)
 
  # making sure we only keep the relevant stations
