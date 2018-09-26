@@ -17,6 +17,5 @@ Imports:
     magrittr,
     jsonlite,
     dplyr
-Remotes : github::pokyah/agrometAPI@master,
-    github::pokyah/mlr@gstat_subfunctions
+Remotes : github::pokyah/agrometAPI@master
 RoxygenNote: 6.0.1
