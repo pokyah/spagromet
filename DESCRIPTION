@@ -13,6 +13,10 @@ Imports:
     agrometAPI,
     gstat,
     sp,
+    raster,
+    magrittr,
+    jsonlite,
+    dplyr
 Remotes : github::pokyah/agrometAPI@v1.4,
     github::pokyah/mlr@gstat_subfunctions
 RoxygenNote: 6.0.1

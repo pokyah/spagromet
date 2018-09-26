@@ -4,8 +4,12 @@
 #' @importFrom magrittr %>%
 #' @importFrom dplyr filter
 #' @importFrom raster crs
-#' @importFrom mapview mapview
-#' @importFrom mapview mapshot
+#' @importFrom gstat idw
+#' @importFrom agrometAPI get_from_agromet_API
+#' @importFrom agrometAPI prepare_agromet_API_data.fun
+#' @importFrom sp coordinates
+#' @importFrom sp CRS
+#' @importFrom sp spTransform
 #' @param isodatetime A character specifying the isodatetime ("YYYY-MM-DDTHH:MM:SS") set of records you want to spatialize
 #' @param sensor A character specifying the sensor you want to spatiliaze (tsa, hra)
 #' @param token_env_var A character specifying your agromet API token.
@@ -36,8 +40,8 @@ spatialize <- function(isodatetime, sensor, user_token){
  spatialized = spatialized["var1.pred"]
 
  # generate the maps
- static.map = sp::spplot(spatialized, do.log = F, colorkey = TRUE,  main = paste0("interpolated ", sensor))
- interactive.map = mapview::mapview(spatialized)
+ # static.map = sp::spplot(spatialized, do.log = F, colorkey = TRUE,  main = paste0("interpolated ", sensor))
+ # interactive.map = mapview::mapview(spatialized)
 
  # transforming to dataframe with proper column names
  spatialized = as.data.frame(spatialized)
