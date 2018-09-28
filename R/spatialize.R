@@ -38,6 +38,7 @@ spatialize <- function(isodatetime, sensor, user_token){
  f <- as.formula(f)
  spatialized = gstat::idw(f, data2spatialize, grid.sp)
  spatialized = spatialized["var1.pred"]
+ spatialized = sp::spTransform(data2spatialize, API_CRS)
 
  # generate the maps
  # static.map = sp::spplot(spatialized, do.log = F, colorkey = TRUE,  main = paste0("interpolated ", sensor))
